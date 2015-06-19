@@ -4,6 +4,14 @@
     'ionic',
     'starter.main'
   ])
+
+    .run(['$ionicPlatform', function($ionicPlatform) {
+      $ionicPlatform.ready(function() {
+        // iPad Landscape standard keyboard height
+        ionic.keyboard.height = 395;
+      });
+    }])
+
     .config(['$stateProvider', '$urlRouterProvider',
       function($stateProvider,
                $urlRouterProvider) {
